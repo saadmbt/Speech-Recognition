@@ -16,9 +16,10 @@ button.addEventListener("click", () => {
 recognition.onresult((event) => {
     for(const result of  event.results){
         var text = result[0].transcript;
+        element.innerText = text;
     }
         
-    element.innerText = text;
+    
 }) ;
 
 // Handle errors 
