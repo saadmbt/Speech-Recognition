@@ -16,10 +16,7 @@ const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognit
 recognition.continuous = true;
 recognition.lang = "en-US";
 // Start recognition when the button is clicked
-btn.addEventListener("click", () => {
-    recognition.start();
-});
-
+recognition.start();
 // Handle errors 
 recognition.addEventListener("error", (event) => {
     console.error("Speech recognition error: ", event.error);
